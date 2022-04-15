@@ -1,0 +1,42 @@
+.brand {
+    display: flex;
+    margin: 0 0 62px 0;
+    padding-top: 65px;
+}
+
+.brand__tittle-wrp {
+    flex-grow: 1;
+    padding: 0 0 0 92px;
+    display: flex;
+    align-items: center;
+    background-color: $light-pink;
+}
+
+.brand__tittle {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+.brand__tittle-wrp::before {
+    content: '';
+    width: 12px;
+    height: 92px;
+    position: relative;
+    background-color: $dark-pink;
+    left: -28px;
+    top: 5px;
+}
+
+
+.brand__subtittle {
+    display: block;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+.brand__subtittle-pink {
+    color: $dark-pink;
+}

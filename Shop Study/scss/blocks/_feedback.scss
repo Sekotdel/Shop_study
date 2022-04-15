@@ -1,0 +1,43 @@
+.feedback {
+    padding-top: 86px;
+    padding-bottom: 126px;
+    background-image: url(../img/surf-bkg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.feedback__objects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feedback__advirtisment {
+    width: 360px;
+    text-align: center;
+
+}
+
+.feedback__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.feedback__from-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.feedback__from-subtext {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+}
