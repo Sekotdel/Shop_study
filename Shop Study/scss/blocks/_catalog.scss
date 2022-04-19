@@ -1,0 +1,141 @@
+.catalog__header {
+    display: block;
+    text-align: center;
+    margin: 0 0 49px;
+}
+
+.catalog__tittle {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: $black;
+}
+
+.catalog-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey;
+}
+
+.catalog__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.catalog__item {
+    width: 360px;
+    height: 580px;
+    background-color: $light-grey;
+    margin: 0 0 10px;
+    
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+
+.add-to-cart {
+    border: 1px solid $white;
+}
+
+.catalog__link {
+    text-decoration: none;
+}
+
+.catalog__item-wrp {
+    position: relative;
+}
+
+.catalog__item-wrp:before {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(58, 56, 56, 0.86);
+}
+
+.catalog__item-button {
+    position: absolute;
+    height: 43px;
+    width: 138px;
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.catalog__item-button .buttonIcon {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 8px;
+}
+
+.catalog__item:hover .catalog__item-button,
+.catalog__item:hover .catalog__item-wrp:before {
+    display: block;
+}
+
+.catalog__item-button:hover {
+    background-color: rgba(58, 56, 56, 0.86);
+}
+
+.catalog__item-button:active {
+    opacity: 0.7;
+}
+
+.catalog__item-tittle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    margin-top: 20px;
+
+}
+
+.catalog-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 15px;
+}
+
+.catalog-price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $dark-pink;
+    margin-top: 18px;
+}
+
+.catalog__button {
+    display: block;
+    position: relative;
+    margin: 50px auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid $dark-pink;
+    background: $white;
+    color: $dark-pink;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 38px;
+    width: 211px;
+    transition: all 400ms ease;
+}
+
+.catalog__button:hover {
+    background: $dark-pink;
+    color: $white;
+    box-shadow: inset 0 0 0 3px $dark-pink;
+}
