@@ -1,30 +1,52 @@
 .sales__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-bottom: 97px;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        max-width: 343px;
+        margin: auto;
+        padding: 0 16px;
+    }
 }
 
 .sales__item {
-    width: 360px;
+    position: relative;
     min-height: 260px;
     background-color: $sales-bkg-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 0 30px;
     box-sizing: border-box;
     text-transform: uppercase;
-    
+    background-size: cover;
+    background-position: center;
+
     @include tablet {
-        width: 232px;
         min-height: 167px;
     }
 
     @include mobile {
-        width: 343px;
-        height: 247px;
+        min-height: 248px;
     }
+
+}
+
+.sales__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlay-black;
+    opacity: 0.7;
 }
 
 .sales__item--woman {
@@ -41,12 +63,14 @@
 
 .sales__item--accesories {
     background-image: url(../img/sales-accesories-bkg.jpg);
-    width: 100%;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-end: -1;
     min-height: 180px;
-    margin: 0 0 97px;
 
     @include tablet {
-        height: 116px;
+        min-height: 116px;
     }
 
     @include mobile {
@@ -55,6 +79,7 @@
 }
 
 .sales__text {
+    position: relative;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
@@ -63,6 +88,7 @@
 }
 
 .sales__tittle {
+    position: relative;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;

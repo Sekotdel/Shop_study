@@ -9,7 +9,15 @@ body {
 .container {
     width: 1140px;
     margin: 0 auto;
-    
+
+    @include tablet {
+        width: 734px;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
 }
 
 .visually-hidden {
@@ -23,16 +31,4 @@ body {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-}
-
-@media (max-width: $desktop-width) {
-    .container {
-        width: 734px;
-    }
-}
-
-@media (max-width: $tablet-width) {
-    .container {
-        width: 343px;
-    }
 }

@@ -194,12 +194,16 @@ body {
 }
 
 @media (max-width: 1599px) {
-  padding: 0 0 0 68px;
+  .brand__tittle-wrp {
+    padding: 0 0 0 68px;
+  }
 }
 
 @media (max-width: 767px) {
-  min-height: 363px;
-  padding: 0 0 0 92px;
+  .brand__tittle-wrp {
+    min-height: 363px;
+    padding: 0 0 0 92px;
+  }
 }
 
 .brand__tittle {
