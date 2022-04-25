@@ -1,4 +1,32 @@
-.nav-sub-item__tittle {
+.header__nav {
+    position: fixed;
+    display: none;
+    top: 75px;
+    right: 0;
+    width: 240px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    z-index: 10;
+    max-height: calc(100% - 75px);
+    overflow: auto;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+    text-transform: uppercase;
+    padding: 37px 0 24px 34px;
+
+}
+
+.nav-sub-item__title {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -19,6 +47,31 @@
     text-decoration: none;
 }
 
-.nav-sub-item__list {
+.nav__link {
+    color: $grey-middle;
     text-decoration: none;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav-sub-item__list {
+    padding-left: 24px;
+    padding-bottom: 30px;
+}
+
+
+
+.nav__menu-closer {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    padding: 16px;
+    background-image: url('./../img/icon/cross.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }

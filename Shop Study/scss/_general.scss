@@ -9,7 +9,15 @@ body {
 .container {
     width: 1140px;
     margin: 0 auto;
-    
+
+    @include tablet {
+        width: 734px;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
 }
 
 .visually-hidden {
